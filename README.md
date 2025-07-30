@@ -1,116 +1,124 @@
-#  Network Solutions Email Integration with Gmail
+# Gmail Integration – Custom Mail & Alias Setup
 
-This project demonstrates how to integrate a business email hosted on **Network Solutions** with **Gmail** for both **sending and receiving** emails securely.
+This repo documents how to connect external email accounts (custom or Gmail) to Gmail using POP/SMTP.
 
----
+## ✅ Use Case
 
-##  Overview
-
-- Connects Network Solutions email to Gmail  
-- Secure configuration with SSL  
-- Custom "Send mail as" setup  
-- PDF documentation included  
+- Practice linking emails without owning a domain
+- Learn Gmail as a mail client for business use
+- Portfolio-ready mail integration workflow
 
 ---
 
-## Objective
+## 🛠️ 1. Setup: Custom Email to Gmail
 
-To set up:
-- Gmail to **fetch emails** from a Network Solutions inbox via **POP3**
-- Gmail to **send emails** using **SMTP** on behalf of the domain email  
+### Requirements
 
----
+- Your domain email (e.g. info@yourdomain.com)
+- Password and access to the email via webmail
+- Gmail account
 
-##  Requirements
+### Steps
 
-- Gmail account  
-- Network Solutions email (e.g., `you@yourdomain.com`)  
-- Access to Webmail and SMTP/POP settings  
+#### A. Enable POP in Your Email
 
----
+1. Login to your webmail (e.g., [mail.networksolutionsemail.com](https://mail.networksolutionsemail.com))
+2. Navigate to **Settings** > **POP/IMAP**
+3. Enable **POP** access
+4. Save changes
 
-## Screenshots
+#### B. Add Custom Email to Gmail (POP)
 
-> Use the following screenshots to ensure you're on the right page during each step.
+1. Go to Gmail → **Settings** → **Accounts and Import**
+2. Under **Check mail from other accounts**, click **Add a mail account**
+3. Enter your email (e.g., `you@domain.com`)
+4. Choose **Import using POP3**
+5. Enter the following:
+Username: you@domain.com
+Password: your password
+POP Server: mail.domain.com (or pop.yourhost.com)
+Port: 995
+Use SSL: ✔️ Checked
+Leave copy: ✔️ Optional
 
-### 1. Enable POP on Network Solutions Webmail  
-![Enable POP on Webmail](images/webmail-pop-enable.png)
+6. Click **Add Account**
 
-### 2. Add Account in Gmail for Receiving  
-![Gmail POP3 Setup](images/gmail-pop3-setup.png)
+#### C. Configure "Send As" (SMTP)
 
-### 3. Configure Gmail to Send Emails via SMTP  
-![Gmail SMTP Setup](images/gmail-smtp-setup.png)
+1. Gmail asks: *"Want to send mail as you@domain.com?"* → Choose **Yes**
+2. Fill in:
+SMTP Server: mail.domain.com
+Port: 465 (SSL) or 587 (TLS)
+Username: you@domain.com
+Password: your password
+Secure Conn: SSL or TLS
 
----
+3. Gmail will send a verification email → copy the code
+4. Paste code into Gmail setup
 
-## Expected Outcome  
-![Email Integration Working](images/email-working.png)
-
----
-
-##  Configuration Steps
-
-### 1. Enable POP on Network Solutions Webmail
-- Go to: [mail.networksolutionsemail.com](https://mail.networksolutionsemail.com)  
-- Navigate to **Settings > POP/IMAP**
-- Enable **POP access**
-
----
-
-### 2. Add Account in Gmail for Receiving
-- Go to Gmail → **Settings > Accounts and Import**  
-- Under "Check mail from other accounts", click **Add a mail account**
-- Enter the following details:
-  - **Email**: `you@yourdomain.com`
-  - **POP3 server**: `mail.yourdomain.com`  
-  - **Port**: `995`  
-  - **Use SSL**: Yes  
-  - **Username**: Full email address  
-  - **Password**: Your email password  
+✅ You're now sending/receiving as your custom domain!
 
 ---
 
-### 3. Configure Gmail to Send from Custom Email
-- After adding the account, Gmail prompts to configure **"Send mail as"**
-- Use the following SMTP settings:
-  - **SMTP server**: `mail.yourdomain.com`
-  - **Port**: `587` or `465`  
-  - **Username**: Full email address  
-  - **Password**: Email password  
-- Gmail will send a verification email — click the link to confirm  
+## 🛠️ 2. Setup: Gmail to Gmail (for practice)
+
+### Requirements
+
+- Your main Gmail account
+- A second (test) Gmail account
+
+### Steps
+
+#### A. Enable POP in Second Gmail
+
+1. Login to your second Gmail (the one you’ll receive from)
+2. Go to **Settings** → **Forwarding and POP/IMAP**
+3. Enable **POP for all mail**
+4. Save changes
+
+#### B. Add Second Gmail to Main Gmail
+
+1. On your **main Gmail** → **Settings** → **Accounts and Import**
+2. Click **Add mail account**
+3. Enter the second Gmail address
+4. Use these details:
+Username: your-second@gmail.com
+Password: your password or App Password
+POP Server: pop.gmail.com
+Port: 995
+Use SSL: ✔️
+
+#### C. Setup "Send As"
+
+- Choose Yes → "Send mail as this account"
+- SMTP Settings:
+MTP Server: smtp.gmail.com
+Port: 465 (SSL) or 587 (TLS)
+Username: your-second@gmail.com
+Password: Gmail password or App Password
+
+
+
+
+📌 If you have 2FA, generate an **App Password** from [https://myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords)
+
+✅ You now simulate a custom domain email experience using 2 Gmail accounts!
 
 ---
 
-## Result
-After setup:
-- Gmail will receive mail sent to `you@yourdomain.com`
-- You can send mail **as your business email** from Gmail
-- Everything is managed from one inbox  
+## 🧪 Optional Practice Tools
+
+- [Zoho Mail](https://zoho.com/mail) – Free business email, good for real tests
+- [Mailtrap.io](https://mailtrap.io) – Simulated dev inbox (for Laravel, PHP testing)
 
 ---
 
-## Project Structure
-mail-integration-practice/    ← This is your repo folder
-├── README.md                 ← Your main README file
-├── config-guide.pdf          ← The PDF guide you referenced
-└── images/                   ← Folder for all screenshots used in README
-    ├── webmail-pop-enable.png
-    ├── gmail-pop3-setup.png
-    ├── gmail-smtp-setup.png
-    └── email-working.png
+## 📂 Example Repo Usage
+
+```bash
+git clone https://github.com/yourusername/gmail-integration-practice.git
+cd gmail-integration-practice
 
 
 
----
-
-## Security
-Passwords are never stored in this repo. This is a **local-only demo** and for **learning/practice purposes only**.
-
----
-
-## Author
-**Samuel George**  
-Practice Task for Upwork Simulation  
-July 2025
 
