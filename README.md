@@ -113,24 +113,6 @@ Password: Gmail password or App Password
 
 ---
 
-## 📂 Example Repo Usage
-
-```bash
-
-
----
-
-Let me know if you want this exported as:
-
-- 🗂️ A downloadable `.zip` repo with folders like `/screenshots`, `/docs`, `/samples`
-- 📥 A step-by-step PDF
-- 🌐 A simple HTML page for sharing the guide
-
-Want to include dummy environment files like `.env.example` too?
-
-git clone https://github.com/yourusername/gmail-integration-practice.git
-cd gmail-integration-practice
-
 
 
 
