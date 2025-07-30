@@ -55,3 +55,21 @@ After setup:
 
 ## Project Structure
 This project contains:
+email-integration-practice/
+├─ README.md
+├─ config-guide.pdf (optional if you want to attach screenshots or step-by-step)
+
+
+
+---
+
+## Security
+Passwords are never stored in this repo. This is a **local-only demo** and for **learning/practice purposes only**.
+
+---
+
+## Author
+**Samuel George**  
+Practice Task for Upwork Simulation  
+July 2025
+
