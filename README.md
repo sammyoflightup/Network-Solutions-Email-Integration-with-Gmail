@@ -1,26 +1,21 @@
 # Network-Solutions-Email-Integration-with-Gmail
 This project demonstrates how to integrate a business email hosted on Network Solutions with Gmail for both **sending and receiving** emails.
 
-
-# 📧 Network Solutions Email Integration with Gmail
-
-This project demonstrates how to integrate a business email hosted on Network Solutions with Gmail for both **sending and receiving** emails.
-
-## 🛠️ Objective
+## Objective
 To set up:
 - Gmail to fetch emails from a Network Solutions inbox via POP3
 - Gmail to send emails using SMTP on behalf of the domain email
 
 ---
 
-## ✅ Requirements
+## Requirements
 - Gmail account
 - Network Solutions email (e.g. you@yourdomain.com)
 - Access to Webmail and SMTP/POP server info
 
 ---
 
-## 🔧 Configuration Steps
+## Configuration Steps
 
 ### 1. Enable POP on Network Solutions Webmail
 - Log in to [mail.networksolutionsemail.com](https://mail.networksolutionsemail.com)
@@ -43,7 +38,7 @@ To set up:
 
 ---
 
-## 🧪 Outcome
+## Outcome
 After setup:
 - Emails sent to `you@yourdomain.com` appear in your Gmail
 - You can send as `you@yourdomain.com` from within Gmail
@@ -51,12 +46,12 @@ After setup:
 
 ---
 
-## 📝 Notes
+## Notes
 - Use **SSL/TLS** for security
 - Create app password if 2FA is enabled
 - Test send/receive after configuration
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 This project contains:
