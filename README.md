@@ -100,6 +100,16 @@ Password: Gmail password or App Password
  If you have 2FA, generate an **App Password** from [https://myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords)
 
 You now simulate a custom domain email experience using 2 Gmail accounts!
+
+
+##  Optional Practice Tools
+
+- [Zoho Mail](https://zoho.com/mail) – Free business email, good for real tests
+- [Mailtrap.io](https://mailtrap.io) – Simulated dev inbox (for Laravel, PHP testing)
+
+---
+
+
 Step 1
 ![step 1](https://github.com/user-attachments/assets/cfe6c706-d1dc-41c0-892b-987fc4a8ecd9)
 ![step 2](https://github.com/user-attachments/assets/61afa773-be26-4d11-b2c9-3027c4060040)
@@ -116,14 +126,4 @@ Step 2
 ![2nd email step 6](https://github.com/user-attachments/assets/977d0780-90f1-48d4-b80f-3ca5372be34b)
 ![2nd email step 7](https://github.com/user-attachments/assets/3329c9d1-8ab1-470f-9f49-60a1d046445b)
 ---
-
-##  Optional Practice Tools
-
-- [Zoho Mail](https://zoho.com/mail) – Free business email, good for real tests
-- [Mailtrap.io](https://mailtrap.io) – Simulated dev inbox (for Laravel, PHP testing)
-
----
-
-
-
 
